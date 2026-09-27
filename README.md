@@ -818,11 +818,21 @@ Os arquivos de origem não fazem parte deste repositório. Para reprodução em 
 
 ---
 
-## Observação
-
-Os resultados apresentados neste repositório possuem finalidade de **exploração, integração e demonstração técnica do MVP**.
-
-Indicadores como criticidade relativa e tendência do CBL devem ser avaliados em conjunto com critérios de engenharia, contexto operacional, inspeções complementares e conhecimento especializado antes de qualquer utilização em decisões de manutenção ferroviária.
+## Autoavaliação
+ 
+O desenvolvimento deste MVP foi realizado dentro da minha própria área de atuação ferroviária, o que representou uma oportunidade importante de aplicar novas ferramentas em desafios que, até então, eu costumava tratar principalmente com Excel e Power BI. Ao estruturar um pipeline de dados no Databricks utilizando a arquitetura Medalhão, com camadas Landing, Bronze, Silver e Gold, pude perceber diferenças significativas em relação à forma como eu vinha lidando com esse tipo de problema.
+ 
+A primeira vantagem que ficou clara foi a **organização e a separação das etapas do tratamento**. Cada camada passou a ter um papel bem definido, o que reduziu significativamente aquela sensação de mistura entre dado bruto, dado tratado e dado analítico que costuma aparecer em fluxos baseados em planilhas. Junto a isso, senti uma **rastreabilidade muito maior entre a fonte, as transformações e o produto final**, o que fortalece a confiança nos resultados apresentados.
+ 
+Também percebi ganhos importantes em relação à **reprodutibilidade e escalabilidade do pipeline**. Diferente de análises pontuais que precisam ser refeitas a cada nova rodada, o pipeline permite reexecutar o processo por completo com muito menos esforço manual. Da mesma forma, as **validações de qualidade passaram a ser mais estruturadas**, deixando de depender apenas de conferências visuais e passando a incluir verificações objetivas de completude, consistência, integridade espacial e cobertura dos relacionamentos.
+ 
+Outro ponto que considerei especialmente relevante foi a **integração consistente entre bases com granularidades diferentes**. Trabalhar simultaneamente com CBL/VTI, Locais de Instalação e Blocos de 25 m exigiu um cuidado maior com regras espaciais, o que evidenciou o quanto uma referência posicional bem definida contribui para produzir análises mais confiáveis. Isso também abriu espaço para **evoluir análises futuras** com maior segurança, reduzindo a dependência de tratamentos manuais e repetitivos que dificilmente se sustentam quando o volume de dados cresce.
+ 
+A construção do pipeline também reforçou a importância de **compreender a estrutura dos comandos e, principalmente, as relações entre as tabelas**. Foi esse entendimento que me permitiu, ao longo da jornada, confirmar que o caminho técnico estava adequado. Os checks de visualização, as amostras exibidas em diferentes momentos e as validações de cobertura foram fundamentais para manter essa segurança durante o desenvolvimento e para identificar ajustes de forma natural, sem depender apenas do resultado final para avaliar se a lógica estava correta.
+ 
+Ao mesmo tempo, considero importante fazer uma reflexão honesta sobre oportunidades de desenvolvimento. Embora eu conheça bem o contexto da minha área, meu conhecimento aprofundado sobre o fenômeno específico analisado neste MVP ainda é limitado. Em uma situação semelhante à de um desenvolvedor que atende às demandas de um time especialista no fenômeno, percebo que preciso ampliar meu domínio técnico sobre o assunto para interpretar melhor os resultados, transformar requisitos em produtos analíticos mais robustos e sustentar decisões técnicas mais consistentes ao longo do processo.
+ 
+Encerro esta autoavaliação com a sensação de que este trabalho foi mais do que uma entrega técnica. Ele funcionou como uma experiência prática de crescimento, tanto em termos de ferramentas quanto em maturidade profissional, ao me colocar diante de decisões técnicas reais, restrições reais e da necessidade de traduzir um contexto ferroviário em um pipeline analítico consistente.
 
 ---
 
